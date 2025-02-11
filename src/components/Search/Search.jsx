@@ -8,9 +8,9 @@ import React, {
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { prefix } from "../settings";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+
+import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from "@mui/icons-material/Close";
 
 const useControlledOrNot = (initialValue, value) => {
   if (typeof value === "undefined") {
@@ -23,7 +23,15 @@ const useControlledOrNot = (initialValue, value) => {
 };
 
 function SearchInner(
-  { placeholder = "", value = undefined, onChange = () => {}, onClearClick = () => {}, className, disabled = false, ...rest },
+  {
+    placeholder = "",
+    value = undefined,
+    onChange = () => {},
+    onClearClick = () => {},
+    className,
+    disabled = false,
+    ...rest
+  },
   ref
 ) {
   const cName = `${prefix}-search`;
@@ -82,7 +90,7 @@ function SearchInner(
         className
       )}
     >
-      <FontAwesomeIcon icon={faSearch} className={`${cName}__search-icon`} />
+      <SearchIcon className={`${cName}__search-icon`} />
       <input
         ref={inputRef}
         type="text"
@@ -92,8 +100,7 @@ function SearchInner(
         disabled={disabled}
         value={searchValue}
       />
-      <FontAwesomeIcon
-        icon={faTimes}
+      <CloseIcon
         className={classNames(`${cName}__clear-icon`, {
           [`${cName}__clear-icon--active`]: clearActive,
         })}

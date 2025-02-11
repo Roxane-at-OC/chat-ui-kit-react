@@ -2,9 +2,8 @@ import React, { useState, useCallback, useMemo } from "react";
 import PropTypes from "prop-types";
 import { prefix } from "../settings";
 import classNames from "classnames";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons/faChevronLeft";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const ExpansionPanel = ({
   children = undefined,
@@ -27,7 +26,7 @@ export const ExpansionPanel = ({
   );
 
   const openModifier = opened === true ? `${cName}--open` : "";
-  const icon = opened === true ? faChevronDown : faChevronLeft;
+  const icon = opened === true ? <ExpandMoreIcon /> : <ChevronLeftIcon />;
 
   const handleOpen = useCallback(
     (e) => {
@@ -45,9 +44,7 @@ export const ExpansionPanel = ({
     <div {...rest} className={classNames(cName, openModifier, className)}>
       <div className={`${cName}__header`} onClick={handleOpen}>
         <div className={`${cName}__title`}>{title}</div>
-        <div className={`${cName}__icon`}>
-          <FontAwesomeIcon icon={icon} />
-        </div>
+        <div className={`${cName}__icon`}>{icon}</div>
       </div>
       <div className={`${cName}__content`}>{children}</div>
     </div>
@@ -75,7 +72,5 @@ ExpansionPanel.propTypes = {
   /** Called when the opening state changes. */
   onChange: PropTypes.func,
 };
-
-
 
 export default ExpansionPanel;

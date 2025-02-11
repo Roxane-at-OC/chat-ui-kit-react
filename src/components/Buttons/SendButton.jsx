@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { prefix } from "../settings";
 import Button from "./Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons/faPaperPlane";
+import SendIcon from "@mui/icons-material/Send";
 
 export const SendButton = ({ className = "", children, ...rest }) => {
   const cName = `${prefix}-button--send`;
@@ -13,7 +12,7 @@ export const SendButton = ({ className = "", children, ...rest }) => {
     <Button
       {...rest}
       className={classNames(cName, className)}
-      icon={<FontAwesomeIcon icon={faPaperPlane} />}
+      icon={<SendIcon />}
     >
       {children}
     </Button>

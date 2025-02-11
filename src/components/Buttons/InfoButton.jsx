@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { prefix } from "../settings";
 import Button from "./Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfoCircle } from "@fortawesome/free-solid-svg-icons/faInfoCircle";
+import InfoIcon from "@mui/icons-material/Info";
 
 export const InfoButton = ({ className = "", children, ...rest }) => {
   const cName = `${prefix}-button--info`;
@@ -13,7 +12,7 @@ export const InfoButton = ({ className = "", children, ...rest }) => {
     <Button
       {...rest}
       className={classNames(cName, className)}
-      icon={<FontAwesomeIcon icon={faInfoCircle} />}
+      icon={<InfoIcon />}
     >
       {children}
     </Button>

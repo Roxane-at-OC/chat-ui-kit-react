@@ -80,10 +80,7 @@
   },
   "dependencies": {
     "@chatscope/chat-ui-kit-styles": "^1.2.0",
-    "@fortawesome/fontawesome-free": "^5.12.1",
-    "@fortawesome/fontawesome-svg-core": "^1.2.26",
-    "@fortawesome/free-solid-svg-icons": "^5.12.0",
-    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@mui/icons-material": "^6.4.4",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2"
   },

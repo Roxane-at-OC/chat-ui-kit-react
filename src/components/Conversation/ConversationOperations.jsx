@@ -1,8 +1,7 @@
 import React from "react";
 import cName from "./cName";
 import classNames from "classnames";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEllipsisV } from "@fortawesome/free-solid-svg-icons/faEllipsisV";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 import PropTypes from "prop-types";
 
 export const ConversationOperations = ({
@@ -19,11 +18,7 @@ export const ConversationOperations = ({
       className
     )}
   >
-    {React.Children.count(children) > 0 ? (
-      children
-    ) : (
-      <FontAwesomeIcon icon={faEllipsisV} />
-    )}
+    {React.Children.count(children) > 0 ? children : <MoreVertIcon />}
   </div>
 );
 
