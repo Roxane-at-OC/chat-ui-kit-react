@@ -1,34 +1,11 @@
 {
-  "name": "@chatscope/chat-ui-kit-react",
-  "version": "2.0.3",
-  "description": "React component library for creating chat interfaces",
-  "license": "MIT",
-  "homepage": "https://chatscope.io/",
-  "keywords": [
-    "chat",
-    "react",
-    "reactjs",
-    "ui",
-    "user interface",
-    "components",
-    "ui kit",
-    "communication",
-    "conversation",
-    "toolkit",
-    "library",
-    "frontend",
-    "reusable",
-    "feed",
-    "comments",
-    "social",
-    "talk"
-  ],
+  "name": "@Roxane-at-OC/chat-ui-kit-react",
+  "version": "1.0.0",
+  "description": "My updated version of the library '@chatscope/chat-ui-kit-react'",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chatscope/chat-ui-kit-react.git"
+    "url": "https://github.com/Roxane-at-OC/chat-ui-kit-react.git"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/es/index.js",
   "types": "src/types/index.d.ts",
   "peerDependencies": {
     "prop-types": "^15.7.2",
@@ -99,46 +76,5 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "release": {
-    "plugins": [
-      [
-        "@semantic-release/commit-analyzer",
-        {
-          "preset": "angular",
-          "releaseRules": [
-            {
-              "type": "docs",
-              "scope": "readme",
-              "release": "patch"
-            },
-            {
-              "scope": "no-release",
-              "release": false
-            }
-          ]
-        }
-      ],
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/changelog",
-        {
-          "changelogFile": "CHANGELOG.md",
-          "changelogTitle": "# @chatscope/chat-ui-kit-react changelog"
-        }
-      ],
-      "@semantic-release/github",
-      "@semantic-release/npm",
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "package.json",
-            "CHANGELOG.md"
-          ],
-          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-        }
-      ]
-    ]
   }
 }
